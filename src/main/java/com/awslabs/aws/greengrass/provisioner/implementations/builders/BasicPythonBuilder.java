@@ -119,6 +119,8 @@ public abstract class BasicPythonBuilder implements PythonBuilder {
         programAndArguments.add(REQUIREMENTS_TXT);
         programAndArguments.add("-t");
         programAndArguments.add(".");
+        // add additional argument so ubuntu systems use the right pip
+        programAndArguments.add("--system");
 
         ProcessBuilder processBuilder = processHelper.getProcessBuilder(programAndArguments);
         processBuilder.directory(functionConf.getBuildDirectory().toFile());

@@ -44,6 +44,12 @@ public class BasicConfigFileHelper implements ConfigFileHelper {
         coreThingMap.put("iotHost", iotHost);
         coreThingMap.put("ggHost", ggVariables.getGgHost(region));
 
+        // Route all traffic over 443 to avoid network restrictions
+        coreThingMap.put("iotMqttPort", 443);
+        coreThingMap.put("ggMqttPort", 443);
+        coreThingMap.put("iotHttpPort", 443);
+        coreThingMap.put("ggHttpPort", 443);
+
         if (deploymentArguments.noSystemD) {
             cgroupMap.put("useSystemd", "no");
         } else {

@@ -268,6 +268,15 @@ if [ "$UPDATE_DEPENDENCIES" = true ]; then
     $INSTALLER install -y $INSTALLER_SPECIFIC_PACKAGES
     $INSTALLER install -y mosh
 
+    echo "Installing Docker"
+    # Don't really install docker though, until we have a tested
+    # stable way of doing it
+    
+    # curl -sSL https://get.docker.com | sh
+    # sudo systemctl enable docker
+    # sudo systemctl start docker
+    # sudo usermod -aG docker pi
+
     if [[ `uname -a` =~ .*hypriotos.* ]]
     then
         easy_install pip

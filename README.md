@@ -1,7 +1,7 @@
 # AWS Greengrass Provisioner (AWS GGP or GGP)
 # (Windows branch)
 [![Build Status](https://travis-ci.org/awslabs/aws-greengrass-provisioner.svg?branch=master)](https://travis-ci.org/awslabs/aws-greengrass-provisioner)
-
+**Note: you really shouldn't be using windows. It will only cause headaches.**
 **Note: GGP expects to be used with Greengrass Core 1.9.2 only!**
 
 Simplifies provisioning Greengrass Cores and building Greengrass Lambda functions.  GGP configures Greengrass so you don't have to.

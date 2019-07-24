@@ -240,7 +240,9 @@ public class BasicLambdaHelper implements LambdaHelper {
     }
 
     private String getFunctionName(String groupName, String baseFunctionName) {
-        return String.join("-", groupName, baseFunctionName);
+        // Changed this so that lambdas do not get group-dependent names
+        // return String.join("-", groupName, baseFunctionName);
+        return baseFunctionName;
     }
 
     @Override
